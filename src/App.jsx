@@ -60,7 +60,6 @@ function App() {
   const handleSplice = function () {
     const newArr = [...array];
     newArr.splice(2, 2, "kiwi", "lime");
-    setArray(newArr);
     setResult(newArr.join(", "));
   };
 
@@ -85,7 +84,7 @@ function App() {
   };
 
   const handleEvery = function () {
-    const every = array.every((item) => item.includes(query));
+    const every = array.every((item) => item.length > 2);
     setResult(every.toString());
   };
 
